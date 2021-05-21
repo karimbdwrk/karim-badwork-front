@@ -1,38 +1,167 @@
+@keyframes dotsOpacity {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+html {
+  background-color: #101010;
+}
+
 .App {
-  text-align: center;
+  background-color: #101010;
+  margin-top: 200px;
+}
+.App .container {
+  min-height: 200px;
+}
+.App .hello .col-6 {
+  padding-right: 0;
+}
+.App .min-width {
+  height: 100px;
+}
+.App .first-column h2 {
+  padding-right: 15px;
+}
+.App .hello > div {
+  display: inline-flex;
+  justify-content: flex-end;
+}
+.App .hello > div h1 {
+  font-size: 48px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #404040;
+}
+.App h2 {
+  font-size: 48px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #E7E7E7;
+  position: absolute;
+  width: 100%;
+}
+.App h2.black {
+  color: #000;
+}
+.App h2.red {
+  color: #be1e2d;
+}
+.App h2.yellow {
+  color: #ffde17;
+}
+.App h2.white {
+  color: #FFF;
+}
+.App h2.blue {
+  color: #21409A;
+}
+.App .bubble {
+  width: fit-content;
+  padding: 2px 20px;
+  border-radius: 25px;
+  border-bottom-left-radius: 0px;
+  background-color: #212121;
+  color: #e7e7e7;
+  font-family: "Montserrat", sans-serif;
+  min-height: 40px;
+  min-width: 75px;
+}
+.App .bubble .loading {
+  position: absolute;
+  font-size: 24px;
+  font-weight: 800;
+}
+.App .bubble .loading b {
+  animation: dotsOpacity 750ms infinite ease;
+  margin-right: 3px;
+}
+.App .bubble .loading b:nth-of-type(2) {
+  animation-delay: 250ms;
+}
+.App .bubble .loading b:nth-of-type(3) {
+  animation-delay: 500ms;
+}
+.App .bubble .content {
+  position: absolute;
+  margin-top: 7px;
+  font-weight: 500;
+}
+.App .description {
+  margin-top: 180px;
+  color: #e7e7e7;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  opacity: 0;
+}
+.App .description.show {
+  opacity: 1;
+  transition: opacity 500ms ease;
+}
+.App .typo {
+  margin-top: 180px;
+  margin-bottom: 180px;
+}
+.App .typo #Typo .typo-1 {
+  fill: #e7e7e7;
+}
+.App .typo #Typo .typo-1.black {
+  fill: #000;
+}
+.App .typo #Typo .typo-1.red {
+  fill: #be1e2d;
+}
+.App .typo #Typo .typo-1.yellow {
+  fill: #ffde17;
+}
+.App .typo #Typo .typo-1.white {
+  fill: #FFF;
+}
+.App .typo #Typo .typo-1.blue {
+  fill: #21409A;
+}
+.App .typo #Lines .cls-15 {
+  fill: #666;
+  stroke: #FFF;
+  stroke-width: 6px;
+}
+.App .shapes {
+  margin-top: 180px;
+  margin-bottom: 180px;
+}
+.App .shapes svg {
+  height: 600px;
+  overflow: visible;
+}
+.App .shapes svg .shape {
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+}
+.App .shapes .black {
+  fill: #000;
+}
+.App .shapes .red {
+  fill: #be1e2d;
+}
+.App .shapes .yellow {
+  fill: #ffde17;
+}
+.App .shapes .white {
+  fill: #FFF;
+}
+.App .shapes .blue {
+  fill: #21409A;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
   }
 }
