@@ -160,6 +160,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
+        <div id="glitchBg"></div>
         <Container>
           <Row className="hello">
             <Col xs={6}><h1 className="">Salut, <br />moi c'est Karim 😁</h1></Col>
