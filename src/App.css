@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "Monument Extended";
+  src: url("./assets/fonts/MonumentExtended-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Monument Extended Ultrabold";
+  src: url("./assets/fonts/MonumentExtended-Ultrabold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Univia Pro";
+  src: url("./assets/fonts/UniviaPro-Regular.woff2") format("woff2");
+}
 @-webkit-keyframes movie {
   0% {
     -webkit-transform: translate(0, 0);
@@ -110,7 +122,7 @@ html {
   pointer-events: none;
   -webkit-animation: movie 1s steps(4) infinite;
   animation: movie 1s steps(4) infinite;
-  background-image: url("https://karim-badwork-back.herokuapp.com/uploads/movie_3c3f14dcb3.png");
+  background-image: url("https://badwork.fr/assets/img/movie.png");
   height: 200%;
   left: -50%;
   top: -50%;
@@ -121,6 +133,7 @@ html {
 
 .App {
   background-color: #101010;
+  font-family: "Univia Pro", sans-serif;
 }
 .App .container {
   min-height: 200px;
@@ -136,18 +149,17 @@ html {
 }
 .App .hello > div {
   display: inline-flex;
-  justify-content: flex-end;
 }
 .App .hello > div h1 {
-  font-size: 48px;
+  font-size: 72px;
   font-weight: 700;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Monument Extended Ultrabold", sans-serif;
   color: #404040;
 }
 .App h2 {
   font-size: 48px;
   font-weight: 700;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Monument Extended", sans-serif;
   color: #E7E7E7;
   position: absolute;
   width: 100%;
@@ -174,7 +186,7 @@ html {
   border-bottom-left-radius: 0px;
   background-color: #212121;
   color: #e7e7e7;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Univia Pro", sans-serif;
   min-height: 40px;
   min-width: 75px;
 }
@@ -201,7 +213,7 @@ html {
 .App .description {
   margin-top: 180px;
   color: #e7e7e7;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Univia Pro", sans-serif;
   font-weight: 500;
   font-size: 18px;
   opacity: 0;
@@ -263,6 +275,27 @@ html {
 }
 .App .shapes .blue {
   fill: #21409A;
+}
+.App .parallax-bg {
+  position: fixed;
+  top: 0;
+}
+.App #scene {
+  display: flex;
+  justify-content: center;
+}
+.App #scene div {
+  width: 100vw;
+  max-width: 1200px;
+  height: 100%;
+  min-height: 500px;
+  margin-top: 10vh;
+}
+.App #scene div svg {
+  max-width: 1200px;
+}
+.App #scene div svg path {
+  stroke: #202020;
 }
 
 @media screen and (min-width: 1200px) {

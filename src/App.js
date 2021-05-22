@@ -8,6 +8,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import anime from 'animejs/lib/anime.es.js';
+import Parallax from 'parallax-js'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -154,6 +155,9 @@ class App extends React.Component {
     //     opacity: [1, 0]
     //   }, '-=1000')
 
+    var scene = document.getElementById('scene');
+    var parallaxInstance = new Parallax(scene);
+
   }
 
   render () {
@@ -161,55 +165,60 @@ class App extends React.Component {
     return (
       <div className="App">
         <div id="glitchBg"></div>
-        <Container>
+        <Container fluid className="parallax-bg">
+          <Row>
+            <Col>
+              <div id="scene">
+                <div data-depth="0.2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 964 678">
+                    <g id="Circle1" data-name="Calque 2">
+                      <g id="Circle1-2" data-name="Calque 1">
+                        <path d="M259,1A258.07,258.07,0,0,1,359.42,496.73,258.07,258.07,0,0,1,158.58,21.27,256.39,256.39,0,0,1,259,1m0-1C116,0,0,116,0,259S116,518,259,518,518,402,518,259,402,0,259,0Z"/>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+                <div data-depth="0.6">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 964 678">
+                    <g id="Circle2" data-name="Calque 2">
+                      <g id="Circle2-2" data-name="Calque 1">
+                        <path d="M822.5,396a140.49,140.49,0,1,1-99.35,41.15A139.57,139.57,0,0,1,822.5,396m0-1A141.5,141.5,0,1,0,964,536.5,141.5,141.5,0,0,0,822.5,395Z"/>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+        <Container fluid>
           <Row className="hello">
-            <Col xs={6}><h1 className="">Salut, <br />moi c'est Karim 😁</h1></Col>
+            <Col><h1 className="">Salut, <br />moi c'est Karim 😁</h1></Col>
           </Row>
           <Row className="min-width">
-            <Col className="first-column">
+            <Col className="first-column" xs={8}>
               <h2 className="text-right frontend white">frontend</h2>
               <h2 className="text-right creative red">creative</h2>
               <h2 className="text-right ui blue">user interface</h2>
               <h2 className="text-right dx yellow">developer experience</h2>
             </Col>
-            <Col>
+            <Col xs={4}>
               <h2 className="text-left developer">developer</h2>
               <h2 className="text-left designer">designer</h2>
             </Col>
           </Row>
         </Container>
-        <Container>
+        {/* <Container>
           <Row className="justify-content-end">
             <Col xs={6}>
               <FirstMessage />
             </Col>
           </Row>
-        </Container>
-        <Container>
+        </Container> */}
+        <Container fluid className="parallax-bg">
           <Row className="justify-content-start">
-            <Col xs={6}>
-              <Description />
-            </Col>
-          </Row>
-        </Container>
-        <Container className="d-none">
-          <Row>
-            <Col>
-              <Badwork />
-            </Col>
-          </Row>
-        </Container>
-        <Container>
-          <Row className="justify-content-end">
-            <Col xs={6}>
-              <Typo />
-            </Col>
-          </Row>
-        </Container>
-        <Container>
-          <Row className="justify-content-start">
-            <Col xs={6}>
-              <Shapes />
+            <Col xs={12}>
+              {/* <Description /> */}
             </Col>
           </Row>
         </Container>
