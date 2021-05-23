@@ -11,11 +11,18 @@ class Description extends React.Component {
         window.addEventListener('scroll', () => {
             console.log(window.scrollX, window.scrollY)
 
-            if (window.scrollY > 200) {
-                document.getElementById('description').classList.add('show')
-                console.log('show')
-            }
+            // if (window.scrollY > 200) {
+            //     document.getElementById('description').classList.add('show')
+            //     console.log('show')
+            // }
         })
+
+
+
+        setTimeout(() => {
+            document.getElementById('description').classList.add('show')
+            console.log('show')
+        }, 1000);
     }
 
     // componentWillUnmount() {

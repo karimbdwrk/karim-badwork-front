@@ -114,7 +114,7 @@
   }
 }
 html {
-  background-color: #101010;
+  background-color: #050505;
 }
 
 #glitchBg {
@@ -132,11 +132,18 @@ html {
 }
 
 .App {
-  background-color: #101010;
+  background-color: #050505;
   font-family: "Univia Pro", sans-serif;
 }
 .App .container {
   min-height: 200px;
+}
+.App .container-fluid {
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+.App #hero {
+  min-height: 100vh;
 }
 .App .hello .col-6 {
   padding-right: 0;
@@ -147,16 +154,44 @@ html {
 .App .first-column h2 {
   padding-right: 15px;
 }
+.App .hello {
+  margin-top: 10vh;
+}
 .App .hello > div {
   display: inline-flex;
 }
 .App .hello > div h1 {
-  font-size: 72px;
+  font-size: 88px;
   font-weight: 700;
   font-family: "Monument Extended Ultrabold", sans-serif;
   color: #404040;
+  z-index: 1;
 }
-.App h2 {
+.App .hello > div h1:hover {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #404040;
+  color: transparent;
+}
+.App .hello > div .marker {
+  height: 160px;
+  width: auto;
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: 480px;
+}
+.App .hello > div .marker svg {
+  width: 100%;
+  overflow: visible;
+}
+.App .hello > div .marker svg path {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 5px;
+  stroke-miterlimit: 10;
+  fill-rule: evenodd;
+}
+.App .subtitle h2 {
   font-size: 48px;
   font-weight: 700;
   font-family: "Monument Extended", sans-serif;
@@ -164,20 +199,74 @@ html {
   position: absolute;
   width: 100%;
 }
-.App h2.black {
-  color: #000;
+.App .selected-works {
+  margin-top: 180px;
 }
-.App h2.red {
-  color: #be1e2d;
+.App .selected-works h2 {
+  font-size: 72px;
+  font-weight: 700;
+  font-family: "Monument Extended", sans-serif;
+  color: #E7E7E7;
+  width: 100%;
+  text-align: center;
+  padding-left: 180px;
 }
-.App h2.yellow {
-  color: #ffde17;
+.App .selected-works h2:hover {
+  font-weight: 300;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #E7E7E7;
+  color: transparent;
 }
-.App h2.white {
-  color: #FFF;
+.App .selected-works .works-list {
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
 }
-.App h2.blue {
-  color: #21409A;
+.App .selected-works .works-list .work {
+  margin-bottom: 90px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-areas: "title illustration";
+}
+.App .selected-works .works-list .work:hover .work-title h3 {
+  font-weight: 300;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #c7c7c7;
+  color: transparent;
+}
+.App .selected-works .works-list .work .work-title {
+  grid-area: title;
+}
+.App .selected-works .works-list .work .work-title h3 {
+  font-size: 42px;
+  font-weight: 700;
+  font-family: "Monument Extended", sans-serif;
+  color: #c7c7c7;
+}
+.App .selected-works .works-list .work .work-title .work-description {
+  text-align: right;
+  padding-right: 90px;
+  color: #e7e7e7;
+}
+.App .selected-works .works-list .work .illustration {
+  grid-area: illustration;
+  height: 180px;
+  overflow: hidden;
+}
+.App .selected-works .works-list .work .illustration img {
+  width: 100%;
+}
+.App .selected-works .works-list .work:nth-of-type(2n) {
+  grid-template-columns: 60% 40%;
+  grid-template-areas: "illustration title";
+}
+.App .selected-works .works-list .work:nth-of-type(2n) .work-title h3 {
+  text-align: right;
+}
+.App .selected-works .works-list .work:nth-of-type(2n) .work-title .work-description {
+  text-align: left;
+  padding-right: 0;
+  padding-left: 90px;
 }
 .App .bubble {
   width: fit-content;
@@ -212,11 +301,10 @@ html {
 }
 .App .description {
   margin-top: 180px;
-  color: #e7e7e7;
+  color: #c7c7c7;
   font-family: "Univia Pro", sans-serif;
   font-weight: 500;
-  font-size: 18px;
-  opacity: 0;
+  font-size: 24px;
 }
 .App .description.show {
   opacity: 1;
@@ -277,8 +365,9 @@ html {
   fill: #21409A;
 }
 .App .parallax-bg {
-  position: fixed;
+  position: absolute;
   top: 0;
+  height: 100vh;
 }
 .App #scene {
   display: flex;
@@ -296,6 +385,34 @@ html {
 }
 .App #scene div svg path {
   stroke: #202020;
+}
+.App .pacman {
+  padding: 0;
+  min-height: 90px;
+  margin-top: 90px;
+}
+.App .pacman .miam svg {
+  height: 200px;
+}
+.App .pacman .miam svg path {
+  transform-origin: center;
+  fill: lightgrey;
+}
+.App .foot-quote {
+  margin-top: 180px;
+}
+.App .foot-quote h2 {
+  font-size: 112px;
+  font-weight: 700;
+  font-family: "Monument Extended", sans-serif;
+  color: #E7E7E7;
+  width: 70%;
+}
+.App .foot-quote h2:hover {
+  font-weight: 300;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #E7E7E7;
+  color: transparent;
 }
 
 @media screen and (min-width: 1200px) {

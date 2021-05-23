@@ -142,7 +142,7 @@
 }
 
 html {
-    background-color: #101010;
+    background-color: #050505;
 }
 
 #glitchBg {
@@ -161,11 +161,20 @@ html {
 }
   
 .App {
-  background-color: #101010;
+  background-color: #050505;
   font-family: 'Univia Pro', sans-serif;
 
   .container {
     min-height: 200px;
+  }
+
+  .container-fluid {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  #hero {
+    min-height: 100vh;
   }
 
   .hello {
@@ -185,22 +194,53 @@ html {
   }
 
   .hello {
+    margin-top: 10vh;
     & > div {
       display: inline-flex;
       //justify-content: flex-end;
 
       h1 {
-        font-size: 72px;
+        font-size: 88px;
         font-weight: 700;
         font-family: 'Monument Extended Ultrabold', sans-serif;
         color: #404040;
+        z-index: 1;
+
+        &:hover {
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: #404040;
+          color: transparent;
+        }
       }
+
+      .marker {
+        height: 160px;
+        width: auto;
+        position: absolute;
+        z-index: 0;
+        bottom: 0;
+        left: 480px;
+
+        svg {
+          width: 100%;
+          overflow: visible;
+
+          path {
+            fill:none;
+            stroke:#eee;
+            stroke-width: 5px;
+            stroke-miterlimit:10;
+            fill-rule:evenodd;
+          }
+        }
+      }
+
     }
   }
 
 
 
-  h2 {
+  .subtitle h2 {
     font-size: 48px;
     font-weight: 700;
     font-family: 'Monument Extended', sans-serif;
@@ -208,24 +248,110 @@ html {
     position: absolute;
     width: 100%;
 
-    &.black {
-      color: #000;
+    // &.black {
+    //   color: #000;
+    // }
+
+    // &.red {
+    //   color: #be1e2d;
+    // }
+
+    // &.yellow {
+    //   color: #ffde17;
+    // }
+
+    // &.white {
+    //   color: #FFF;
+    // }
+
+    // &.blue {
+    //   color: #21409A;
+    // }
+  }
+
+  .selected-works {
+    margin-top: 180px;
+    h2 {
+      font-size: 72px;
+      font-weight: 700;
+      font-family: 'Monument Extended', sans-serif;
+      color: #E7E7E7;
+      width: 100%;
+      text-align: center;
+      padding-left: 180px;
+
+      &:hover {
+        font-weight: 300;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #E7E7E7;
+        color: transparent;
+      }
     }
 
-    &.red {
-      color: #be1e2d;
-    }
+    .works-list {
+      margin-top: 90px;
+      display: flex;
+      flex-direction: column;
 
-    &.yellow {
-      color: #ffde17;
-    }
+      .work {
+        margin-bottom: 90px;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-areas: 
+          "title illustration";
 
-    &.white {
-      color: #FFF;
-    }
+        &:hover {
+          .work-title h3 {
+            font-weight: 300;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #c7c7c7;
+            color: transparent;
+          }
+        }
 
-    &.blue {
-      color: #21409A;
+        .work-title {
+          grid-area: title;
+
+          h3 {
+            font-size: 42px;
+            font-weight: 700;
+            font-family: 'Monument Extended', sans-serif;
+            color: #c7c7c7;
+          }
+          .work-description {
+            text-align: right;
+            padding-right: 90px;
+            color: #e7e7e7;
+          }
+        }
+        .illustration {
+          grid-area: illustration;
+          height: 180px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        &:nth-of-type(2n) {
+          grid-template-columns: 60% 40%;
+          grid-template-areas: 
+            "illustration title";
+
+          .work-title {
+
+            h3 {
+              text-align: right;
+            }
+            .work-description {
+              text-align: left;
+              padding-right: 0;
+              padding-left: 90px;
+            }
+          }
+        }
+      }
     }
   }
 
@@ -269,11 +395,11 @@ html {
 
   .description {
     margin-top: 180px;
-    color: #e7e7e7;
+    color: #c7c7c7;
     font-family: 'Univia Pro', sans-serif;
     font-weight: 500;
-    font-size: 18px;
-    opacity: 0;
+    font-size: 24px;
+
 
     &.show {
       opacity: 1;
@@ -355,8 +481,9 @@ html {
   }
 
   .parallax-bg {
-    position: fixed;
+    position: absolute;
     top: 0;
+    height: 100vh;
   }
 
   #scene {
@@ -376,6 +503,42 @@ html {
         path {
           stroke: #202020;
         }
+      }
+    }
+  }
+
+  .pacman {
+    padding: 0;
+    min-height: 90px;
+    margin-top: 90px;
+
+    .miam {
+
+      svg {
+        height: 200px;
+
+        path {
+          transform-origin: center;
+          fill: lightgrey;
+        }
+      }
+    }
+  }
+
+  .foot-quote {
+    margin-top: 180px;
+    h2 {
+      font-size: 112px;
+      font-weight: 700;
+      font-family: 'Monument Extended', sans-serif;
+      color: #E7E7E7;
+      width: 70%;
+
+      &:hover {
+        font-weight: 300;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #E7E7E7;
+        color: transparent;
       }
     }
   }
