@@ -247,6 +247,7 @@ html {
   text-align: right;
   padding-right: 90px;
   color: #e7e7e7;
+  top: 100px !important;
 }
 .App .selected-works .works-list .work .illustration {
   grid-area: illustration;

@@ -158,6 +158,11 @@ class App extends React.Component {
     var scene = document.getElementById('scene');
     var parallaxInstance = new Parallax(scene);
 
+    var workTitles = document.getElementsByClassName('work-title')
+    for (let title of workTitles) {
+      new Parallax(title)
+    }
+
     anime({
       targets: '.miam',
       translateX: '100%',
@@ -270,8 +275,8 @@ class App extends React.Component {
                   <div className="works-list">
                     <div className="work">
                       <div className="work-title">
-                        <h3>Agence_<br /> Leon</h3>
-                        <p className="work-description">Agence de relation presse, Paris & Lyon</p>
+                        <h3 data-depth="0.2">Agence_<br /> Leon</h3>
+                        <p data-depth="0.3" className="work-description">Agence de relation presse, Paris & Lyon</p>
                       </div>
                       <div className="illustration">
                         <img src="https://badwork.fr/assets/img/pic-rejoindre.jpg" />
@@ -279,8 +284,8 @@ class App extends React.Component {
                     </div>
                     <div className="work">
                       <div className="work-title">
-                        <h3>Structure_<br /> Paris</h3>
-                        <p className="work-description">Agence de relation presse, Paris & Lyon</p>
+                        <h3 data-depth="0.2">Structure_<br /> Paris</h3>
+                        <p data-depth="0.3" className="work-description">Agence de relation presse, Paris & Lyon</p>
                       </div>
                       <div className="illustration">
                         <img src="https://badwork.fr/assets/img/pic-rejoindre.jpg" />
@@ -295,7 +300,7 @@ class App extends React.Component {
             <Row className="justify-content-start">
               <Col xs={12}>
                 <div className="foot-quote">
-                  <h2>I'm always interested about cool stuff. Are you minding a project?</h2>
+                  <h2>I'm always interested about cool stuff 😎. Are you minding a project? 🤙</h2>
                 </div>
               </Col>
             </Row>
