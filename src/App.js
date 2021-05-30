@@ -275,7 +275,7 @@ class App extends React.Component {
                   <div className="works-list">
                     <div className="work">
                       <div className="work-title">
-                        <h3 data-depth="0.2">Agence_<br /> Leon</h3>
+                        <h3 data-depth="0.2">Encré_<br /> Atelier</h3>
                         <p data-depth="0.3" className="work-description">Agence de relation presse, Paris & Lyon</p>
                       </div>
                       <div className="illustration">
@@ -285,6 +285,42 @@ class App extends React.Component {
                     <div className="work">
                       <div className="work-title">
                         <h3 data-depth="0.2">Structure_<br /> Paris</h3>
+                        <p data-depth="0.3" className="work-description">Agence de relation presse, Paris & Lyon</p>
+                      </div>
+                      <div className="illustration">
+                        <img src="https://badwork.fr/assets/img/pic-rejoindre.jpg" />
+                      </div>
+                    </div>
+                    <div className="work">
+                      <div className="work-title">
+                        <h3 data-depth="0.2">Agence_<br /> Leon</h3>
+                        <p data-depth="0.3" className="work-description">Agence de relation presse, Paris & Lyon</p>
+                      </div>
+                      <div className="illustration">
+                        <img src="https://badwork.fr/assets/img/pic-rejoindre.jpg" />
+                      </div>
+                    </div>
+                    <div className="work">
+                      <div className="work-title">
+                        <h3 data-depth="0.2">ClinD'Oeil_<br /> Paris</h3>
+                        <p data-depth="0.3" className="work-description">Agence de relation presse, Paris & Lyon</p>
+                      </div>
+                      <div className="illustration">
+                        <img src="https://badwork.fr/assets/img/pic-rejoindre.jpg" />
+                      </div>
+                    </div>
+                    <div className="work">
+                      <div className="work-title">
+                        <h3 data-depth="0.2">Badwork_<br /> Digital</h3>
+                        <p data-depth="0.3" className="work-description">Agence de relation presse, Paris & Lyon</p>
+                      </div>
+                      <div className="illustration">
+                        <img src="https://badwork.fr/assets/img/pic-rejoindre.jpg" />
+                      </div>
+                    </div>
+                    <div className="work">
+                      <div className="work-title">
+                        <h3 data-depth="0.2">Dstny_<br /> Company</h3>
                         <p data-depth="0.3" className="work-description">Agence de relation presse, Paris & Lyon</p>
                       </div>
                       <div className="illustration">

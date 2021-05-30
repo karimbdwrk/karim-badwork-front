@@ -248,6 +248,7 @@ html {
   padding-right: 90px;
   color: #e7e7e7;
   top: 100px !important;
+  left: inherit !important;
 }
 .App .selected-works .works-list .work .illustration {
   grid-area: illustration;
@@ -268,6 +269,7 @@ html {
   text-align: left;
   padding-right: 0;
   padding-left: 90px;
+  right: 0;
 }
 .App .bubble {
   width: fit-content;
